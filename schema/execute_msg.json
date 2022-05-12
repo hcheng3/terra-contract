@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ExecuteMsg",
+  "anyOf": [
+    {
+      "type": "object",
+      "required": [
+        "enter_score_for_token"
+      ],
+      "properties": {
+        "enter_score_for_token": {
+          "type": "object",
+          "required": [
+            "address",
+            "score",
+            "token"
+          ],
+          "properties": {
+            "address": {
+              "type": "string"
+            },
+            "score": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "token": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  ]
+}
